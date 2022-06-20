@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = prompt("Digite um numero")
+        let i = 0
+        
+       while (i<=10){
+           document.write(`${i} x ${n} = ${i*n}<br>`)
+           i++
+           if(i===8){
+               continue//indice de soma deve vir antes do continue no caso de while
+           }
+       }
+
+        document.write("saiu do while<br>")
+        
+        do{
+
+            if(i>10){
+                alert("i maior que 10")
+                break// interroumpeu o loop
+            }
+            document.write(`${i} x ${n} = ${i*n}<br>`)
+
+        } while(i<=10)
+
+        document.write("saiu do dowhile<br>")
+
+        for(let j = 0; j <= 10; j++){
+            if(j===5){
+                continue// nesse caso pulou o 5
+            }
+            document.write(`${j} x ${n} = ${j*n}<br>`)
+
+        }
+
+        document.write("saiu do for")
+    </script>
+</body>
+</html>

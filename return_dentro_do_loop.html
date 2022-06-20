@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>funções - tabuada</h1>
+
+    <button onclick="mostrarTabuada()">Mostrar Tabuada</button>
+    <button onclick = "LimparTabuada()">Limpar Tabuada</button>
+    <div id="output"></div>
+
+
+    <script>
+            const output = document.getElementById("output")
+            function mostrarTabuada(){
+                let msg = ""//vazio     
+                let n1 = Number(prompt("Digite um valor"))
+                for(let i=0 ; i<=1000 ; i++){
+                    if (i=== 10){
+                        break//para no 10
+                        //return //sai da função e a linha posterior nao sera mostrada
+                    }
+                    msg += `${i} x ${n1} = ${(n1 * i)}<br>`             
+                }
+                output.innerHTML = msg 
+            }
+
+            function LimparTabuada(){
+              output.innerText = ""
+
+            }
+
+            
+
+    </script>
+</body>
+</html>
